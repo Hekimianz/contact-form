@@ -35,6 +35,7 @@ body {
 
 main {
   width: 91.5%;
+  max-width: 73.6rem;
   background-color: #fff;
   border-radius: 16px;
   padding: 2.4rem;
@@ -51,7 +52,8 @@ h1 {
 
 form,
 .form__input,
-fieldset {
+.field__query,
+.field__names {
   display: flex;
   flex-direction: column;
 }
@@ -64,9 +66,15 @@ form {
   gap: 0.8rem;
 }
 
-fieldset {
+.field__query,
+.field__names {
   gap: 1.6rem;
   border: none;
+}
+
+.field__names input,
+.field__query .radio__input {
+  width: 100%;
 }
 
 legend {
@@ -75,7 +83,7 @@ legend {
 
 label,
 .error__message,
-fieldset {
+.field__query {
   font-size: var(--ff-fs-body-s);
   font-weight: var(--ff-weight-reg);
   line-height: 150%;
@@ -216,4 +224,16 @@ button:focus {
 .radio__input label:focus {
   outline: 3px solid var(--clr-green-600); /* Highlight focus */
   outline-offset: 2px;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    padding: 4rem;
+  }
+
+  .field__names,
+  .field__query {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

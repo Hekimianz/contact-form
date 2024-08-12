@@ -23,46 +23,48 @@
     <main>
       <h1>Contact Us</h1>
       <form>
-        <div class="form__input">
-          <label for="firstName"
-            >First Name<span class="required__star">*</span></label
-          >
-          <input
-            type="text"
-            name="first name"
-            id="firstName"
-            autocomplete="given-name"
-            required
-            aria-describedby="firstNameError"
-          />
-          <span
-            class="error__message"
-            id="firstNameError"
-            aria-live="assertive"
-            role="alert"
-            >This field is required</span
-          >
-        </div>
-        <div class="form__input">
-          <label for="lastName"
-            >Last Name<span class="required__star">*</span></label
-          >
-          <input
-            type="text"
-            name="last name"
-            id="lastName"
-            autocomplete="family-name"
-            required
-            aria-describedby="lastNameError"
-          />
-          <span
-            class="error__message"
-            id="lastNameError"
-            aria-live="assertive"
-            role="alert"
-            >This field is required</span
-          >
-        </div>
+        <fieldset class="field__names">
+          <div class="form__input">
+            <label for="firstName"
+              >First Name<span class="required__star">*</span></label
+            >
+            <input
+              type="text"
+              name="first name"
+              id="firstName"
+              autocomplete="given-name"
+              required
+              aria-describedby="firstNameError"
+            />
+            <span
+              class="error__message"
+              id="firstNameError"
+              aria-live="assertive"
+              role="alert"
+              >This field is required</span
+            >
+          </div>
+          <div class="form__input">
+            <label for="lastName"
+              >Last Name<span class="required__star">*</span></label
+            >
+            <input
+              type="text"
+              name="last name"
+              id="lastName"
+              autocomplete="family-name"
+              required
+              aria-describedby="lastNameError"
+            />
+            <span
+              class="error__message"
+              id="lastNameError"
+              aria-live="assertive"
+              role="alert"
+              >This field is required</span
+            >
+          </div>
+        </fieldset>
         <div class="form__input">
           <label for="email"
             >Email Address<span class="required__star">*</span></label
@@ -83,7 +85,7 @@
             >Please enter a valid email address</span
           >
         </div>
-        <fieldset>
+        <fieldset class="field__query">
           <legend>Query Type <span class="required__star">*</span></legend>
 
           <div class="radio__input">
@@ -95,14 +97,14 @@
             <input type="radio" name="query" id="support" required />
             <label for="support" tabindex="0">Support Enquiry</label>
           </div>
-          <span
-            class="error__message"
-            id="queryError"
-            aria-live="assertive"
-            role="alert"
-            >Please select a query type</span
-          >
         </fieldset>
+        <span
+          class="error__message"
+          id="queryError"
+          aria-live="assertive"
+          role="alert"
+          >Please select a query type</span
+        >
         <div class="form__input">
           <label for="message"
             >Message<span class="required__star">*</span></label
