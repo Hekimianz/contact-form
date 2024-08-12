@@ -10,8 +10,145 @@
       href="./assets/images/favicon-32x32.png"
     />
     <title>Frontend Mentor | Contact form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="app.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <h1>Contact Us</h1>
+      <form>
+        <div class="form__input">
+          <label for="firstName"
+            >First Name<span class="required__star">*</span></label
+          >
+          <input
+            type="text"
+            name="first name"
+            id="firstName"
+            autocomplete="given-name"
+            required
+            aria-describedby="firstNameError"
+          />
+          <span
+            class="error__message"
+            id="firstNameError"
+            aria-live="assertive"
+            role="alert"
+            >This field is required</span
+          >
+        </div>
+        <div class="form__input">
+          <label for="lastName"
+            >Last Name<span class="required__star">*</span></label
+          >
+          <input
+            type="text"
+            name="last name"
+            id="lastName"
+            autocomplete="family-name"
+            required
+            aria-describedby="lastNameError"
+          />
+          <span
+            class="error__message"
+            id="lastNameError"
+            aria-live="assertive"
+            role="alert"
+            >This field is required</span
+          >
+        </div>
+        <div class="form__input">
+          <label for="email"
+            >Email Address<span class="required__star">*</span></label
+          >
+          <input
+            type="email"
+            name="email"
+            id="email"
+            autocomplete="email"
+            required
+            aria-describedby="emailError"
+          />
+          <span
+            class="error__message"
+            id="emailError"
+            aria-live="assertive"
+            role="alert"
+            >Please enter a valid email address</span
+          >
+        </div>
+        <fieldset>
+          <legend>Query Type <span class="required__star">*</span></legend>
+
+          <div class="radio__input">
+            <input type="radio" name="query" id="general" required />
+            <label for="general" tabindex="0">General Enquiry</label>
+          </div>
+
+          <div class="radio__input">
+            <input type="radio" name="query" id="support" required />
+            <label for="support" tabindex="0">Support Enquiry</label>
+          </div>
+          <span
+            class="error__message"
+            id="queryError"
+            aria-live="assertive"
+            role="alert"
+            >Please select a query type</span
+          >
+        </fieldset>
+        <div class="form__input">
+          <label for="message"
+            >Message<span class="required__star">*</span></label
+          >
+          <textarea
+            name="message"
+            id="message"
+            required
+            aria-describedby="messageError"
+          ></textarea>
+          <span
+            class="error__message"
+            id="messageError"
+            aria-live="assertive"
+            role="alert"
+            >This field is required</span
+          >
+        </div>
+
+        <div class="checkbox__input">
+          <input
+            type="checkbox"
+            name="consent"
+            id="consent"
+            required
+            aria-describedby="consentError"
+          />
+          <label for="consent" tabindex="0"
+            ><div>
+              I consent to being contacted by the team<span
+                class="required__star"
+                >*</span
+              >
+            </div></label
+          >
+        </div>
+        <span
+          class="error__message"
+          id="consentError"
+          aria-live="assertive"
+          role="alert"
+          >To submit this form, please consent to being contacted</span
+        >
+
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
 </html>
