@@ -22,7 +22,7 @@
   <body>
     <main>
       <h1>Contact Us</h1>
-      <form>
+      <form novalidate>
         <fieldset class="field__names">
           <div class="form__input">
             <label for="firstName"
@@ -37,7 +37,7 @@
               aria-describedby="firstNameError"
             />
             <span
-              class="error__message"
+              class="error__message hidden"
               id="firstNameError"
               aria-live="assertive"
               role="alert"
@@ -57,7 +57,7 @@
               aria-describedby="lastNameError"
             />
             <span
-              class="error__message"
+              class="error__message hidden"
               id="lastNameError"
               aria-live="assertive"
               role="alert"
@@ -78,7 +78,7 @@
             aria-describedby="emailError"
           />
           <span
-            class="error__message"
+            class="error__message hidden"
             id="emailError"
             aria-live="assertive"
             role="alert"
@@ -99,7 +99,7 @@
           </div>
         </fieldset>
         <span
-          class="error__message"
+          class="error__message hidden"
           id="queryError"
           aria-live="assertive"
           role="alert"
@@ -116,7 +116,7 @@
             aria-describedby="messageError"
           ></textarea>
           <span
-            class="error__message"
+            class="error__message hidden"
             id="messageError"
             aria-live="assertive"
             role="alert"
@@ -142,7 +142,7 @@
           >
         </div>
         <span
-          class="error__message"
+          class="error__message hidden"
           id="consentError"
           aria-live="assertive"
           role="alert"
@@ -151,6 +151,13 @@
 
         <button type="submit">Submit</button>
       </form>
+      <section class="success">
+        <div class="success__top">
+          <img src="./assets/images/icon-success-check.svg" alt="" />
+          <h2>Message Sent!</h2>
+        </div>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </section>
     </main>
   </body>
 </html>

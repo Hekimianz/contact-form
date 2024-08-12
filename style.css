@@ -226,7 +226,74 @@ button:focus {
   outline-offset: 2px;
 }
 
+.success {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 2.4rem;
+  border-radius: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 87.2%;
+  max-width: 45rem;
+  background-color: var(--clr-grey-900);
+  color: #fff;
+  padding: 2.4rem;
+  gap: 0.8rem;
+  opacity: 0;
+}
+
+.success__top {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+h2 {
+  font-size: var(--ff-fs-body-m);
+  font-weight: var(--ff-weight-bold);
+  line-height: 150%;
+}
+
+p {
+  font-size: var(--ff-fs-body-s);
+  line-height: 150%;
+  color: var(--clr-green-200);
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: flex;
+  animation: slideDown 4s ease-in-out forwards;
+  opacity: 1;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%) translateX(-50%);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0) translateX(-50%);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0) translateX(-50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%) translateX(-50%);
+  }
+}
+
 @media screen and (min-width: 768px) {
+  body {
+    padding: 12.8rem 0;
+  }
   main {
     padding: 4rem;
   }
